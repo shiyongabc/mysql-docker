@@ -2,7 +2,7 @@ FROM oraclelinux:latest
 
 MAINTAINER Mark Leith (mark@markleith.co.uk)
 
-ENV METHODMAKER_PACKAGE_URL ftp://rpmfind.net/linux/epel/7/x86_64/p/perl-Class-MethodMaker-2.20-1.el7.x86_64.rpm
+ENV METHODMAKER_PACKAGE_URL http://rpmfind.net/linux/epel/7/x86_64/Packages/p/perl-Class-MethodMaker-2.20-1.el7.x86_64.rpm
 ENV LIB_PACKAGE_URL https://dev.mysql.com/get/Downloads/MySQL-Cluster-7.5/mysql-cluster-community-libs-7.5.4-1.el7.x86_64.rpm
 ENV COMMON_PACKAGE_URL https://dev.mysql.com/get/Downloads/MySQL-Cluster-7.5/mysql-cluster-community-common-7.5.4-1.el7.x86_64.rpm
 ENV CLIENT_PACKAGE_URL https://dev.mysql.com/get/Downloads/MySQL-Cluster-7.5/mysql-cluster-community-client-7.5.4-1.el7.x86_64.rpm
