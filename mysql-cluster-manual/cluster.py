@@ -93,9 +93,9 @@ def node_name(nodeid, node_type):
 	return "{0}-{1}{2}".format(args.name, node_type, nodeid)
 
 def write_ini_section(file, header, nodeid):
-	#file.write("\n["+header+"]\n")
-	#file.write("NodeId={0}\n".format(nodeid))
-	#file.write("HostName={0}\n".format(ip(nodeid)))
+	file.write("\n["+header+"]\n")
+	file.write("NodeId={0}\n".format(nodeid))
+	file.write("HostName={0}\n".format(ip(nodeid)))
 
 def build_config_ini():
 	try:
@@ -120,7 +120,7 @@ def build_config_ini():
 			nodeid += 1
 
 def build(args):
-	build_config_ini()
+	#build_config_ini()
 	cmd('docker build -t {0}:{1} -f {2}/management-node/Dockerfile {2}/management-node'.format(MGMD_BASE_IMAGE, VERSION, SCRIPTDIR))
 	cmd('docker build -t {0}:{1} -f {2}/data-node/Dockerfile {2}/data-node'.format(NDBD_BASE_IMAGE, VERSION, SCRIPTDIR))
 	cmd('docker build -t {0}:{1} -f {2}/sql-node/Dockerfile {2}/sql-node'.format(API_BASE_IMAGE, VERSION, SCRIPTDIR))
