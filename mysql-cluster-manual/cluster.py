@@ -24,7 +24,7 @@ import shutil
 import subprocess
 import sys
 
-REPO = "markleith/mysql-cluster"
+REPO = "shiyongabc/mysql-cluster"
 VERSION = "7.5"
 
 NAME = "mycluster"
